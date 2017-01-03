@@ -25,3 +25,24 @@ puts "You've got #{10 - num_guesses} guesses left."
 print "make a guess: "
 
 guess = gets.to_i
+
+#Compare the guess to target.
+#print the appropriate message
+
+if guess < target
+	puts "Ooops. Your guess was Low"
+	elseif guess > target
+	puts "Ooops Your target was HIGH."
+
+	elseif guess == target
+	puts "Good job, #{name}!"
+	puts "You guessed my number in #{num_guesses} guesses!"
+
+	guessed_it = true
+end
+
+#if player run out of turns, tell them what the number was .
+
+if not guessed_it
+	puts "Sorry . You didn't get my number. (It was #{target}.)"
+end
