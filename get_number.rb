@@ -22,3 +22,6 @@ puts "can you guess it?"
 num_guesses = 0
 
 puts "You've got #{10 - num_guesses} guesses left."
+print "make a guess: "
+
+guess = gets.to_i
