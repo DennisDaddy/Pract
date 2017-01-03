@@ -17,13 +17,17 @@ puts "I've got a random number between 1 and 100"
 
 puts "can you guess it?"
 
+target = rand(100) + 1
+
 #Tracks how many guesses the player has made
 
 num_guesses = 0
 
+#track whether the player has guessed correctly
+guessed_it = false
+
 puts "You've got #{10 - num_guesses} guesses left."
 print "make a guess: "
-
 guess = gets.to_i
 
 #Compare the guess to target.
@@ -31,10 +35,10 @@ guess = gets.to_i
 
 if guess < target
 	puts "Ooops. Your guess was Low"
-	elseif guess > target
+	elsif guess > target
 	puts "Ooops Your target was HIGH."
 
-	elseif guess == target
+	elsif guess == target
 	puts "Good job, #{name}!"
 	puts "You guessed my number in #{num_guesses} guesses!"
 
