@@ -26,9 +26,13 @@ num_guesses = 0
 #track whether the player has guessed correctly
 guessed_it = false
 
+while num_guesses < 10 && guessed_it == false
+
 puts "You've got #{10 - num_guesses} guesses left."
 print "make a guess: "
 guess = gets.to_i
+
+num_guesses += 1
 
 #Compare the guess to target.
 #print the appropriate message
@@ -45,8 +49,10 @@ if guess < target
 	guessed_it = true
 end
 
+end
+
 #if player run out of turns, tell them what the number was .
 
-if not guessed_it
+ unless guessed_it
 	puts "Sorry . You didn't get my number. (It was #{target}.)"
 end
